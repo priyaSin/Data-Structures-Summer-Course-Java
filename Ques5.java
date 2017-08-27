@@ -1,4 +1,4 @@
-/* ASSIGNMENT - 2 QUESTION-4
+/* ASSIGNMENT - 2 QUESTION-5
 
 Problem Statement - Write a program to input a number and print the sum of all it’s even digits and
 sum of all its odd digits separately.
