@@ -30,7 +30,7 @@ public class Ques5e{
 
 
 		// For lower half of the pattern
-		for (int i = 1 ; i < 9 ; i++){
+		for (int i = 1 ; i <= 9 ; i++){
 			k = k-2;                           // Spaces decreasing, stars increasing.
 			if(i % 2 == 0 && i!=2){           //  i!= 2 is for the case for printing two stars in a row(We dont want that again as that case has been covered in the last loop for upper half of the pattern)    
 			for (int j = 0 ; j < i/2 ; j++){

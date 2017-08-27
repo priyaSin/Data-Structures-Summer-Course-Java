@@ -1,0 +1,17 @@
+/*
+ASSIGNMENT - 1 QUESTION- 7
+(THIS ASSIGNMENT IS TO MAKE FLOWCHARTS AND WRITE PSUEDOCODES, BUT I AM CODING THESE QUESTIONS)
+
+Problem Statement - Starting from point (0,0) on a plane, we have written all non-negative integers
+0, 1, 2,... as shown in the figure. For example, 1, 2, and 3 has been written at points (1,1),
+(2,0), and (3, 1) respectively and this pattern has continued.
+
+[SEE THE ASSIGNMENT FOR FOR GRAPH FIGURE]
+
+You are to write a pseudo-code that reads the coordinates of a point (x, y), and writes the number
+(if any) that has been written at that point. (x, y) coordinates in the input are in the range
+0...100000.
+ */
+
+import java.util.Scanner;
+public class 
