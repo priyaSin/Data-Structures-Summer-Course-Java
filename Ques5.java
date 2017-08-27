@@ -11,8 +11,8 @@ public class Ques5{
 		int oddSum = 0;
 		int evenSum = 0;
 		while(num > 0){
-			int a = num % 10;
-			num = num/10;
+			int a = num % 10;     //extracting each digit from right(435 % 10 = 5) and checking if it is odd or even and then add accordingly to EvenSum or OddSum
+			num = num/10;        // Num is reduced by one digit from the right - 435 /10 = 43
 			if(a %2 ==0){
 				evenSum += a;
 			}

@@ -26,7 +26,7 @@ public class Ques3{
 		else if(grade == 'B'){
 			allow = 1500;
 		}
-		else {
+		else {    //Grade = C
 			allow = 1300;
 		}
 		return basic + hra + da + allow - pf;
@@ -36,7 +36,7 @@ public class Ques3{
 		Scanner s = new Scanner (System.in);
 		int basic = s.nextInt();
 		System.out.println("Enter the grade of the person:");
-		char grade = s.next().charAt(0);
+		char grade = s.next().charAt(0);             //// Scanner class supports no nextChar() function
 		double t_salary = totalSalary(basic ,grade);
 		System.out.println("The total salary of person with basic = " + basic + " and grade = " + grade + " : " + t_salary);
 	}

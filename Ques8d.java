@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class Ques8d{
 
 	public static void printPattern(int N){
-		for( int i = N ; i >= 1 ; i--){
-			for ( int j = 1 ; j <=i ; j++ ){
+		for( int i = N ; i >= 1 ; i--){ // Iterating through each row
+			for ( int j = 1 ; j <=i ; j++ ){ // Number of values on each row = row number
 				System.out.print(j);
 			}
 			System.out.println();

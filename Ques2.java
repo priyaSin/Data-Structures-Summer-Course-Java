@@ -9,7 +9,7 @@ public class Ques2{
 	public static void main(String [] args){
 		System.out.println("Enter a character :");
 		Scanner s = new Scanner(System.in);
-		char ch = s.next().charAt(0);       // Scanner class supports no nextChar()
+		char ch = s.next().charAt(0);       // Scanner class supports no nextChar() function
 
 		if (ch >= 'A' && ch <= 'Z'){
 			System.out.println("Entered Character is upper case.");

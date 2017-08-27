@@ -5,12 +5,12 @@ Problem Statement - Write a program to generate the reverse of a given number.
 */
 import java.util.Scanner;
 public class Ques7b{
-	public static int findReverse(int num){
+	public static int findReverse(int num){  // Returning integer as reverse of a number
 		int sum = 0;
-		while (num > 0){
-			int a = num % 10;
-			sum = sum * 10 + a;
-			num = num / 10;
+		while (num > 0){                    // Until becomes = 0
+			int a = num % 10;               // Extracting the right most digit. 435%10 = 5
+			sum = sum * 10 + a;             // Multiplying the sum by 10 and add the right most digit. 5 * 10 + 3 = 53.
+			num = num / 10;                // removing the right most digit. 435 / 10 = 43
 		}
 		return sum;
 

@@ -6,11 +6,11 @@ Problem Statement - Write a program to generate the reverse of a given number.
 import java.util.Scanner;
 public class Ques7a{
 
-	public static String findReverse(int num){
-		String rev = "";
-		String str = Integer.toString(num);
-		char arr [] = str.toCharArray();
-		for (int i = arr.length-1 ; i >=0 ; i--){
+	public static String findReverse(int num){ // Returning a String as reverse of the number 
+		String rev = "";                      // Initializing an empty string
+		String str = Integer.toString(num);  // Converting to Integer to String 
+		char arr [] = str.toCharArray();    // String to character array
+		for (int i = arr.length-1 ; i >=0 ; i--){  // adding each character in the reverse order to "rev" String
 			rev += arr[i];
 		}
 		return rev;

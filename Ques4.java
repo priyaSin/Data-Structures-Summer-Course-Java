@@ -22,13 +22,13 @@ public class Ques4{
 		double a = s.nextDouble();
 		double b = s.nextDouble();
 		double c = s.nextDouble();
-		double D = Math.pow(b , 2) - 4 * a * c;
+		double D = Math.pow(b , 2) - 4 * a * c; // Discriminant = b^2 - 4ac
 		if(D >= 0){
 			double [] roots = findRoots(D , a , b);
 			System.out.println("The roots of the given equation are real in nature and are equal to :" +roots[0] + " " + roots[1] );
 		}
 		else{
-			System.out.println("The roots of the given equation are not real in nature");
+			System.out.println("The roots of the given equation are not real in nature.");
 		}
 
 	}

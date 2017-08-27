@@ -40,8 +40,8 @@ public class Ques1{
 		for (int i = 0 ; i < 3 ; i++){
 			arr[i] = s.nextInt();
 		}
-		int max2values [] = findTwoMax(arr); 
-		double avg = findAverage(max2values);
+		int max2values [] = findTwoMax(arr);          //Finding the top two maximum numbers in an array
+		double avg = findAverage(max2values);        // Finding the average of all the numbers of an array
 		System.out.println("The name of the student is : " + name);
 		System.out.println("The average of the best of two marks is : " + avg);
 		}

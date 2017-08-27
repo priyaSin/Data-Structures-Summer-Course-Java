@@ -7,17 +7,17 @@ import java.util.Scanner;
 public class Ques8b{
 
 	public static void printPattern(int N){
-		for ( int i = 1 ; i <= N ; i++){
-			if(i == 1 ){
-				System.out.println(1);
+		for ( int i = 1 ; i <= N ; i++){ // Iterating through each row
+			if(i == 1 ){                // 1 is to be printed on the first row and then start pattern
+				System.out.println(1); // hence continue;
 				continue;
 			}
-			for ( int j = 1 ; j <= i ; j++){
-				if(j == 1 || j == i){
+			for ( int j = 1 ; j <= i ; j++){ // Number of values in each row is equal to row number
+				if(j == 1 || j == i){    // for first and last place in each row we need to put value "rowNumber -1 " 
 				System.out.print(i - 1);
 			}
 			else{
-				System.out.print(0);
+				System.out.print(0);   //Else at all other places put "0"
 			}
 			}
 			System.out.println();

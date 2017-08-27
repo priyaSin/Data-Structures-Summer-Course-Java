@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class Ques8a{
 
 	public static void printPattern(int N){
-		for (int i = 0 ; i < N ; i++){
-			for (int j = 0 ; j <= i ; j++) {
+		for (int i = 0 ; i < N ; i++){  // Iterating through each row
+			for (int j = 0 ; j <= i ; j++) { //Printing the values on each row
 				System.out.print(1);
 			}
-			System.out.println();
+			System.out.println();   // going to next row
 		}
 
 

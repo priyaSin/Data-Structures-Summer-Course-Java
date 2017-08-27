@@ -6,7 +6,7 @@ Idea - Using recursion
 import java.util.Scanner;
 public class Ques6{
 	public static int power(int x , int n) {
-		if(x == 1 || n == 0){
+		if(x == 1 || n == 0){     // For the cases of (1)^n = 1 and (x)^0 = 1
 			return 1;
 		}
 		return x * power(x , n-1);
