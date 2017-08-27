@@ -1,34 +1,43 @@
-/* ASSIGNMENT - 1 QUESTION-2
-(THIS ASSIGNMENT IS TO MAKE FLOWCHARTS AND WRITE PSUEDOCODES, BUT I AM CODING THESE QUESTIONS)
+/* ASSIGNMENT - 2 QUESTION-3
 
-Problem Statement - Write a pseudo-code which reads N from user and prints all prime numbers from 2 to N.
+Problem Statement - Write a program to calculate the total salary of a person. The user has to enter
+the basic and the grade and depending upon which the total salary is calculated as:
 
+t_sal = basic + hra + da + allow – pf
+	where :
+		hra = 20% of basic
+		da = 50% of basic
+		allow = 1700 if grade = ‘A’
+	    allow = 1500 if grade = ‘B’
+	    allow = 1300 if grade = ‘C’ 
+	    pf = 11% of basic.
 */
 import java.util.Scanner;
-
 public class Ques3{
-	public static void printPrime(int N){
-		if(N < 2){
-			System.out.println("Least prime number is 2. Series can not be printed.");
-			return;
+
+	public static double totalSalary(int basic , char grade){
+		int allow = 0;
+		double hra = 0.2 * basic;
+		double da = 0.5 * basic;
+		double pf = 0.11 * basic;
+		if(grade == 'A'){
+			allow = 1700;
 		}
-		for(int i = 2 ; i < N ; i++){
-			Boolean isPrime = true;
-			for(int j = 2 ; j< i ; j++ ){
-				if (i%j == 0){
-					isPrime = false;
-					break;
-				}
-			}
-			if(isPrime){
-				System.out.print(i + " ");
-			}
-		}	
-	}
+		else if(grade == 'B'){
+			allow = 1500;
+		}
+		else {
+			allow = 1300;
+		}
+		return basic + hra + da + allow - pf;
+}
 	public static void main(String [] args){
-		System.out.println("Enter the value of N:");
+		System.out.println("Enter the basic salary:");
 		Scanner s = new Scanner (System.in);
-		int N = s.nextInt();
-		printPrime(N);
+		int basic = s.nextInt();
+		System.out.println("Enter the grade of the person:");
+		char grade = s.next().charAt(0);
+		double t_salary = totalSalary(basic ,grade);
+		System.out.println("The total salary of person with basic = " + basic + " and grade = " + grade + " : " + t_salary);
 	}
 }

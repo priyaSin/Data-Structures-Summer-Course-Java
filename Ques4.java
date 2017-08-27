@@ -1,34 +1,35 @@
-/* ASSIGNMENT - 1 QUESTION-4
-(THIS ASSIGNMENT IS TO MAKE FLOWCHARTS AND WRITE PSUEDOCODES, BUT I AM CODING THESE QUESTIONS)
+/* ASSIGNMENT - 2 QUESTION-4
 
-Problem Statement - Write pseudo code which tells whether the input integer number is an Armstrong number, or not.
- (153 is an Armstrong number because:153 = 13 + 53 + 33 )
+Problem Statement - Write a program to calculate the roots of a quadratic equation ax^2+bx+c=0,
+display them on the screen specifying their nature.
 
-Idea - An Armstrong number of three digits is an integer such that the sum of the cubes of its
-digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 +1**3 = 371.
+Roots of an equation are given by = (-b +- (D)^0.5)/2a where D = b^2 - 4ac.
+
 */
-
 import java.util.Scanner;
 import java.lang.Math;
 public class Ques4{
+	public static double [] findRoots(double D ,double a , double b){
+		double root1 = (-b + Math.pow(D , 0.5))/ 2*a ;
+		double root2 =  (-b + Math.pow(D , 0.5))/ 2*a ;
+		double roots[] = {root1 , root2};
+		return roots;
 
-	public static Boolean ifArmstrong(int N){
-		int sum = 0;
-		int num = N;
-		int digit = 0;
-		while( num > 0){
-		digit = num % 10;
-		num = num / 10;
-		sum += Math.pow(digit , 3 );
-	}
-	return sum == N;
-
-	}
+	} 
 	public static void main(String [] args){
-		System.out.println("Enter an integer to be checked:");
+		System.out.println("For the quadratic equation ax^2+bx+c=0, enter the values of a , b , c: ");
 		Scanner s = new Scanner (System.in);
-		int N = s.nextInt();
-		System.out.println("Number is Armstrong: " + ifArmstrong(N));
+		double a = s.nextDouble();
+		double b = s.nextDouble();
+		double c = s.nextDouble();
+		double D = Math.pow(b , 2) - 4 * a * c;
+		if(D >= 0){
+			double [] roots = findRoots(D , a , b);
+			System.out.println("The roots of the given equation are real in nature and are equal to :" +roots[0] + " " + roots[1] );
+		}
+		else{
+			System.out.println("The roots of the given equation are not real in nature");
+		}
+
 	}
-	
 }
