@@ -1,48 +1,46 @@
-/* ASSIGNMENT - 2 QUESTION-1
+/* ASSIGNMENT - 2b QUESTION-1
 
-Problem Statement - Write a program to input name and marks of three tests of a student and
-calculate and print the name and average of best two test marks.
-(assuming that the marks are integral values)
+Problem Statement - Write a program that asks the user for a number n and gives him the possibility
+to choose between computing the sum and computing the product of 1,...,n.
 
+Idea - Learn how to use switch statement in Java.
 */
 import java.util.Scanner;
 public class Ques1{
 
-	public static int [] findTwoMax( int [] arr){
-		int max1 = 0;
-		int max2 = 0;
-		for( int i = 0 ; i < arr.length ; i++){
-			if(arr[i] > max1){
-				max2 = max1;
-				max1 = arr[i];
-			}
-			else if (max2 < arr[i]){
-				max2 = arr[i];
-			}
+	public static void computeSum(int N){
+		int sum = 0 ;
+		for ( int i = 1 ; i <= N ; i++){
+			sum += i;
 		}
-		int max2values [] = { max1 , max2};
-		return max2values;
+		System.out.println("The total computed sum from 1 to N : " + sum);
 	}
-	public static double findAverage(int [] arr){
-		int sum = 0;
-		for ( int i = 0 ; i < arr.length ; i++){
-			sum += arr[i];
+	public static void computeProduct(int N){
+		int product = 1;
+		for ( int i = 1 ; i <= N ; i++){
+			product *= i;
 		}
-		return sum/arr.length;
+		System.out.println("The total computed product from 1 to N: " + product);
 	}
 
+
+
+
 	public static void main(String [] args){
-		System.out.println("Enter the name of the student:");
+		System.out.println("Enter an integer N:");
 		Scanner s = new Scanner(System.in);
-		String name = s.nextLine();
-		System.out.println("Enter the marks for three subjects:");
-		int arr [] = new int [3];
-		for (int i = 0 ; i < 3 ; i++){
-			arr[i] = s.nextInt();
+		int N = s.nextInt();
+		System.out.println("Enter 0 or 1 for computing the sum or product respectively:");
+		int option = s.nextInt();
+		switch(option){
+			case 0 :
+			computeSum(N);
+			break;
+			case 1:
+			computeProduct(N);
+			break;
+			default:
+			System.out.println("You entered an invalid character.");
 		}
-		int max2values [] = findTwoMax(arr);          //Finding the top two maximum numbers in an array
-		double avg = findAverage(max2values);        // Finding the average of all the numbers of an array
-		System.out.println("The name of the student is : " + name);
-		System.out.println("The average of the best of two marks is : " + avg);
-		}
+	}
 }
