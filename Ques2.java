@@ -9,12 +9,13 @@ public class Ques2{
 
 	public static void printSeries(int n){
 		int count = 0;
-		for(int i = 1 ; i <= n ; i++){
-			if(count == 20){
+		for(int i = 1 ; i <= n ; i++){     
+			if(count == 20){                    // As the count (number of multiples) reaches 20, stop.
 				break;
 			}
-			if((3 * i + 2) % 4 == 0){
+			if((3 * i + 2) % 4 == 0){           //Check if 3n+2 is a multiple of 4 or not.
 				System.out.println(3 * i + 2);
+				count++;
 			}
 
 		}

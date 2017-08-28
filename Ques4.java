@@ -16,11 +16,12 @@ public class Ques4{
 		int remainder = 0;
 		int quotient = 0;
 		int sum = 0;
-		Boolean flag = false;
+		Boolean flag = false;           // This is taken in order to check if the right most digits after conversion to binary is "0" or not.
+		                                // For example for the case of 14, binary is = 1110
 		while (decimal > 0){
 			quotient = decimal / 2;
 			remainder = decimal % 2;
-			if(sum == 0 && remainder == 0){
+			if(sum == 0 && remainder == 0){ // Following the case where last digit of binary comes out to be "0"
 				sum = 10;
 				flag = true;
 			}
@@ -29,9 +30,8 @@ public class Ques4{
 			}
 			decimal = quotient;
 		}
-		System.out.println(sum);
-		int rev = reverse(sum);
-		if(flag == true ){
+		int rev = reverse(sum);            // Calculating reverse of the series of 0s and 1s obtained to produce the right binary number for the decimal number given
+		if(flag == true ){                 // For removing the extra 1 that comes in the end because of the manipulation done when last digit of teh binary number is coming out to be "0"
 			rev = rev /10;
 		}
 		return rev;

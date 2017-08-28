@@ -8,14 +8,14 @@ Idea - Learn how to use switch statement in Java.
 import java.util.Scanner;
 public class Ques1{
 
-	public static void computeSum(int N){
+	public static void computeSum(int N){  // Finding sum of all the elements of the array.
 		int sum = 0 ;
 		for ( int i = 1 ; i <= N ; i++){
 			sum += i;
 		}
 		System.out.println("The total computed sum from 1 to N : " + sum);
 	}
-	public static void computeProduct(int N){
+	public static void computeProduct(int N){  // Finding product of all the elements of the array.
 		int product = 1;
 		for ( int i = 1 ; i <= N ; i++){
 			product *= i;

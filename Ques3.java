@@ -13,10 +13,10 @@ public class Ques3{
 		int i = 0;
 		int sum = 0;
 		while(binary > 0){
-			int a = binary % 10;
-			sum += Math.pow(2 , i) * a;
+			int a = binary % 10;                 // Extracting the right most digit
+			sum += Math.pow(2 , i) * a;          // Applying 2^i according to the place and multiplying by place value
 			i++;
-			binary = binary/10;
+			binary = binary/10;                  // Removing the right most digit from the number
 		}
 		return sum;
 	}
