@@ -1,5 +1,5 @@
 /* 
-ASSIGNMENT - 3 QUESTION-7
+ASSIGNMENT - 3 QUESTION-8
 Problem Statement - You are given two arrays. Find the sum of the two arrays and
 put the result in another array.
 E.g. if you are given [1,2,4] and [4,5,6] then output should be [5,8,0].
