@@ -10,6 +10,8 @@ public class Ques3{
 	public static void reverseAnArray(int [] arr){
 		int temp = 0;
 		for ( int i = 0 ; i < arr.length/2 ; i++){
+			//Swapping first and last element, similarly second and second last and so on
+			// until we reach the middle element (arr.length/2) of the array
 			temp = arr[i];
 			arr[i] = arr[arr.length-1-i];
 			arr[arr.length -1 -i] = temp;

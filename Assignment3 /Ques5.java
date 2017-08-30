@@ -8,12 +8,16 @@ public class Ques5{
 	public static void findPairs(int [] arr , int x){
 		int value = 0;
 		for ( int i = 0 ; i < arr.length ; i++){
+			// value to search for in the array
 			value = x-arr[i];
-			for ( int j = 0 ; j < arr.length ; j++){
+			for ( int j = i+1 ; j < arr.length ; j++){
 				if(arr[j] == value){
+					// After we find the other element of the pair, we change both the values to
+					//Maximum integral value so that the same pair doesnt appear again in further iterations
+					// and break from the loop as we do not need to further look for the other element of teh pair
 					System.out.println("The possible pair : (" + arr[i] + " , " +  arr[j] + ")");
-					arr[i] = Integer.MIN_VALUE;
-					arr[j] = Integer.MIN_VALUE;
+					arr[i] = Integer.MAX_VALUE;
+					arr[j] = Integer.MAX_VALUE;
 					break;
 				}
 			}

@@ -12,10 +12,12 @@ public class Ques7{
 		for(int i = 0 ; i < arr.length-1 ; i++){
 			nonRepeat = arr[i];
 			for( int j = i+1 ; j < arr.length ; j++){
-				if(arr[i] == arr[j]){
+				if(arr[i] == arr[j]){ //As soon as find the element to be repeating we exit out of the loop
 					break;
 				}
-				if(j == arr.length -1 ){
+				if(j == arr.length -1 ){ 
+				// if we reach the end of the loop and doesnt not find repeating element then,
+				// nonRepeat is the "First " non-Repeating element, we must "return" it.
 					return nonRepeat;
 				}
 			}

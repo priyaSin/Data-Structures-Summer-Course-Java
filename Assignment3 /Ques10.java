@@ -1,4 +1,4 @@
-/*  ASSIGNMENT - 3 QUESTION-9 
+/*  ASSIGNMENT - 3 QUESTION-10
 Problem Statement - Bubble Sort
 */
 import java.util.Scanner;

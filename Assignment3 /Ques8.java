@@ -11,9 +11,11 @@ public class Ques8{
 		int [] arr3 = new int [arr1.length +1];
 		int sum = 0;
 		for(int i = arr3.length-1 ; i > 0 ; i-- ){
-			sum = (arr1[i-1] + arr2[i-1] + arr3[i]) ;
+			// sum of the corresponding two values of the array and carry from last addition
+			sum = (arr1[i-1] + arr2[i-1] + arr3[i]) ; 
 			System.out.print(" ALREADY PRESENT VALUE (CARRY FROM LAST SUM)" + arr3[i]);
 			System.out.println();
+			//if sum >=10 then carry generated to be put in the next arr3 element to the left.
 			if(sum >= 10){
 				arr3[i-1] = sum/10;
 			}
@@ -22,6 +24,7 @@ public class Ques8{
 			System.out.println();
 			System.out.print("CARRY GENERATED " + arr3[i-1]);
 			System.out.println();
+			//The unit place of the sum produced is kept in current arr3 element
 			arr3 [i] = sum % 10;
 		}
 		return arr3;

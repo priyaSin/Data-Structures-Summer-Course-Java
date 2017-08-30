@@ -2,6 +2,7 @@
 ASSIGNMENT - 3 QUESTION-4
 Problem Statement - Print sum of all positive and negative numbers separately in
 an array.
+IDEA - Maintaining a positive sum (Sum of all positives) and negative Sum (sum of all negatives) while iterating through the loop
 */
 import java.util.Scanner;
 public class Ques4{

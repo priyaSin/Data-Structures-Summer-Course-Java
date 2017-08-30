@@ -1,6 +1,8 @@
 /*  ASSIGNMENT - 3 QUESTION-9 
 Problem Statement - You are given with an array containing only 0’s
 and 1’s. Write a function to sort this array. Find a solution which scans the array only once.
+IDEA - Counting the number of zeros and number of ones. Making an array of the same size 
+and placing 0s and 1s according to their count.
 */
 import java.util.Scanner;
 public class Ques9{
