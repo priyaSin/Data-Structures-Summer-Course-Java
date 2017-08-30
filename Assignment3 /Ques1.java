@@ -5,19 +5,22 @@ Problem Statement - Convert a decimal number to binary using array.
 
 import java.util.Scanner;
 public class Ques1{
-	public static void [] getBinary(num){
+	public static void getBinary(int num){
 		int remainder = 0;
 		int quotient = 0;
 		int bin [] = new int [100];
-		count = 0;
+		int count = 0;
 		while(num != 0){
 			bin[count] = num %2;
 			num = num/2;
 			count++;
 		}
-		count = 0;
-		while(bin[count] != Null){
-			System.out.print(bin[count] + " ");
+		// Resetting count (decreased by 1) due to the last iteration
+		count--;
+		System.out.println("The binary equivalent of the decimal number = ");
+		while(count >= 0){
+			System.out.print(bin[count]);
+			count--;
 		}
 	}
 	public static void main(String [] args){
