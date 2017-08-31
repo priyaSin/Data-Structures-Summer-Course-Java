@@ -1,4 +1,4 @@
-/* ASSIGNMENT - 4 QUESTION-5a
+/* ASSIGNMENT - 4 QUESTION-5b
 Problem Statement - You are given with an array containing only 0’s,
 1’s and 2’s. Write a function to sort this array. Also find another solution which scans the array
 once. 
@@ -26,7 +26,7 @@ public class Ques5b{
 			if(arr[mid] == 0){
 				swap(arr, low , mid);
 					low++;
-					//mid ++;
+					mid ++;
 			}
 			else if(arr[mid] == 2){
 				swap(arr , mid , high);
