@@ -11,20 +11,15 @@ public class Ques6{
 		String compress = "";
 		int count = 1;
 		for(int i = 0 ; i < arr.length ; i++){
-			if(arr[i] == arr[i+1] && i != arr.length-1){
+			count = 1;
+			compress += arr[i];	
+			while(i+1 < arr.length && arr[i] == arr[i+1]){
 				count++;
+				i++;
 			}
-			else if(arr[i] != arr[i+1] && count ==1){
-				compress = compress + arr[i+1] ;
+			if(count != 1){
+			compress += count;
 			}
-			else if(i == arr.length-1 && count == 1){
-					compress = compress + arr[i];
-				}
-			else{
-				compress = compress + arr[i+1] + count ;
-				count = 1;
-			}
-			System.out.println(compress);
 		}
 		return compress;
 	}
