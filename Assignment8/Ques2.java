@@ -1,4 +1,4 @@
-/* ASSIGNMENT - 8 QUESTION - 1
+/* ASSIGNMENT - 8 QUESTION - 2
 Problem Statement - Implement Merge Sort.
 */
 import java.util.Scanner;
