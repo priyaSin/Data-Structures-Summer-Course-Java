@@ -1,10 +1,10 @@
-/* ASSIGNMENT - 8 QUESTION - 4
+/* ASSIGNMENT - 8 QUESTION - 4a
 Problem Statement -  Using the phone keypad, return all possible words that can be produced
 given input digits. For e.g. 23 --> “ad, ae, af, bd, be, bf, cd, ce, cf”
 a.  Instead of returning print all these
 */
 import java.util.Scanner;
-public class Ques4{
+public class Ques4a{
 
 	public static String [] keypad( int n , String [] options){
 		if(n == 0){
